@@ -1,5 +1,7 @@
 package config;
 
+import observer.Observer_ag1;
+import observer.Observer_ag2;
 import observer.Naekang;
 import subject.ActionGuidelineImpl;
 import subject.CovidProbabilitySubjectImpl;
@@ -25,7 +27,8 @@ public class Covid19ServiceConfig {
 
     public ActionGuidelineImpl actionGuideline() {
         ActionGuidelineImpl actionGuideline = new ActionGuidelineImpl();
-        //actionGuideline.addObserver();
+        actionGuideline.addObserver(new Observer_ag1());
+        actionGuideline.addObserver(new Observer_ag2());
         return actionGuideline;
     }
 
