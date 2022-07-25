@@ -1,8 +1,4 @@
 import config.Covid19ServiceConfig;
-import observer.Observer;
-import observer.Observer1;
-import subject.ActionGuidelineImpl;
-import subject.CovidProbabilitySubjectImpl;
 import system.Covid19Service;
 
 import java.util.Scanner;
