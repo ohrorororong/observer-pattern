@@ -26,7 +26,7 @@ public class Covid19ServiceConfig {
     public ActionGuidelineImpl actionGuideline() {
         ActionGuidelineImpl actionGuideline = new ActionGuidelineImpl();
         //actionGuideline.addObserver();
-        return actionGuideline();
+        return actionGuideline;
     }
 
     public CovidProbabilitySubjectImpl covidProbabilitySubject() {

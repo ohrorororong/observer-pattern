@@ -12,10 +12,6 @@ public class Client {
         service.addServiceSubscriber(Covid19ServiceConfig.getInstance().actionGuideline());
         service.addServiceSubscriber(Covid19ServiceConfig.getInstance().covidProbabilitySubject());
 
-        CovidProbabilitySubjectImpl subject = new CovidProbabilitySubjectImpl();
-        service.addServiceSubscriber(subject);
-        subject.addObserver(new Naekang());
-
         service.start(); // 서비스 시작
 
         scanner.nextLine();
