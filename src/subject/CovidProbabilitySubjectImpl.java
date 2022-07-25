@@ -1,7 +1,6 @@
 package subject;
 
 import observer.Observer;
-import system.Covid19Service;
 import system.Covid19ServiceSubscriber;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class CovidProbabilitySubjectImpl implements CovidProbabilitySubject, Cov
     @Override
     public void notifyObserver() {
         for (Observer observer : observers) {
-            observer.update(confirmedPersonnel, deadPersonnel);
+            observer.update(confirmedPersonnel, deadPersonnel, healerPersonnel);
         }
     }
 

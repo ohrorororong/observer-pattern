@@ -1,6 +1,6 @@
 package observer;
 
-public class Observer1 implements Observer {
+public class Observer_ag1 implements Observer {
     public int cumulativeCP = 0;
 
     @Override
