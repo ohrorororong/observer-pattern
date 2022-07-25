@@ -1,5 +1,6 @@
 package config;
 
+import observer.Naekang;
 import subject.ActionGuidelineImpl;
 import subject.CovidProbabilitySubjectImpl;
 import system.Covid19Service;
@@ -30,7 +31,7 @@ public class Covid19ServiceConfig {
 
     public CovidProbabilitySubjectImpl covidProbabilitySubject() {
         CovidProbabilitySubjectImpl covidProbabilitySubject = new CovidProbabilitySubjectImpl();
-        //covidProbabilitySubject.addObserver();
+        covidProbabilitySubject.addObserver(new Naekang());
         return covidProbabilitySubject;
     }
 }
