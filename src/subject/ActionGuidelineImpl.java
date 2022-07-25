@@ -30,7 +30,6 @@ public class ActionGuidelineImpl implements ActionGuideline, Covid19ServiceSubsc
         }
     }
 
-
     @Override
     public void update(Integer confirmedPersonnel, Integer deadPersonnel, Integer healerPersonnel) {
         this.confirmedPersonnel = confirmedPersonnel;
