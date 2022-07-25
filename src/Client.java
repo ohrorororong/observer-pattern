@@ -1,4 +1,6 @@
 import config.Covid19ServiceConfig;
+import observer.Observer1;
+import subject.CovidProbabilitySubjectImpl;
 import system.Covid19Service;
 import system.Covid19ServiceImpl;
 
@@ -9,6 +11,10 @@ public class Client {
     public static void main(String[] args) throws InterruptedException {
         Covid19Service service = Covid19ServiceConfig.getInstance().covid19Service();
         // 구독자 등록
+
+        CovidProbabilitySubjectImpl subject = new CovidProbabilitySubjectImpl();
+        service.addServiceSubscriber(subject);
+        subject.addObserver(new Observer1());
 
         service.start(); // 서비스 시작
 
