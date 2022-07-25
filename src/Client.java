@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Client {
     static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Covid19Service service = Covid19ServiceConfig.getInstance().covid19Service();
         // 구독자 등록
 
@@ -14,5 +14,7 @@ public class Client {
 
         scanner.nextLine();
         scanner.nextLine();
+
+        service.stop();
     }
 }
