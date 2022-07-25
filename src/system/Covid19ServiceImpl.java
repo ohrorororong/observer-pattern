@@ -43,6 +43,12 @@ public class Covid19ServiceImpl implements Covid19Service {
 
     @Override
     public void addServiceSubscriber(Covid19ServiceSubscriber subscriber) {
+        if(subscriber != null && !subscribers.contains(subscriber)) {
+            subscribers.add(subscriber);
+        }
+    }
+
+    private void update() {
         for (Covid19ServiceSubscriber covid19ServiceSubscriber : subscribers) {
             covid19ServiceSubscriber.update(
                     this.confirmedPersonnel,
@@ -50,6 +56,7 @@ public class Covid19ServiceImpl implements Covid19Service {
                     this.healerPersonnel);
         }
     }
+
 
     private void serviceRequest() {
         while (isRun) {
@@ -59,6 +66,7 @@ public class Covid19ServiceImpl implements Covid19Service {
                 healerPersonnel = random.nextInt(MAX_HEALER_PERSONNEL);
                 System.out.println("확진자 : " + this.confirmedPersonnel + ", 사망자 : " + this.deadPersonnel
                         + " 완치자 : " + this.healerPersonnel);
+                update();
                 Thread.sleep(TIME_INTERVAL);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
