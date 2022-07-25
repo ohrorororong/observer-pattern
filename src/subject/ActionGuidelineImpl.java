@@ -1,7 +1,6 @@
 package subject;
 
 import observer.Observer;
-import system.Covid19Service;
 import system.Covid19ServiceSubscriber;
 
 import java.util.ArrayList;
