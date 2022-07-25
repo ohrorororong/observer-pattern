@@ -35,7 +35,6 @@ public class CovidProbabilitySubjectImpl implements CovidProbabilitySubject, Cov
         this.confirmedPersonnel = confirmedPersonnel;
         this.deadPersonnel = deadPersonnel;
         this.healerPersonnel = healerPersonnel;
-        System.out.println("CovidProbabilitySubjectImpl.update");
         notifyObserver();
     }
 }
